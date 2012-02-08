@@ -12,10 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Name:" %><br />
     <%= f.text_field :name %>
   </div>
+
+  <br />
+  <div class="field">
+  <%= f.fields_for :helps do |builder| %>
+    <%= builder.label :tip, "Tip" %><br />
+    <%= builder.text_field :tip %>
+  <% end %>                                  
+  </div> 
+  
+  <br />
+  <div class="help_field">
+    <%= button_tag "Add a tip", :id => "add_tip" %>
+  </div>
+  <br />
+                    
+  </br>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<br />

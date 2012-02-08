@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tip:</b>
+  <%= @help.tip %>
+</p>
+
+<p>
+  <b>Film:</b>
+  <%= @help.film %>
+</p>
+
+
+<%= link_to 'Edit', edit_help_path(@help) %> |
+<%= link_to 'Back', helps_path %>

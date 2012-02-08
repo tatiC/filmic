@@ -5,6 +5,12 @@
   <%= @film.name %>
 </p>
 
+<% @film.helps.each do |t| %>
+  <p>
+    <b>Dica <%= t.tip_number(t.film_id) %>:</b>
+    <%= t.tip %>
+  </p>                       
+<% end %>
 
 <%= link_to 'Edit', edit_film_path(@film) %> |
 <%= link_to 'Back', films_path %>

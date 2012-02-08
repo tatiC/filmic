@@ -1,0 +1,25 @@
+<h1>Listing helps</h1>
+
+<table>
+  <tr>
+    <th>Tip</th>
+    <th>Film</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @helps.each do |help| %>
+  <tr>
+    <td><%= help.tip %></td>
+    <td><%= help.film %></td>
+    <td><%= link_to 'Show', help %></td>
+    <td><%= link_to 'Edit', edit_help_path(help) %></td>
+    <td><%= link_to 'Destroy', help, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Help', new_help_path %>

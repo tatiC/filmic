@@ -24,8 +24,8 @@ class FilmsController < ApplicationController
   # GET /films/new
   # GET /films/new.json
   def new
-    @film = Film.new
-
+    @film = Film.new 
+    @film.helps.build
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @film }
